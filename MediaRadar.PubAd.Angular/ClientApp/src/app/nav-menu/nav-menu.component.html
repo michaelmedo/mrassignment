@@ -1,0 +1,31 @@
+<div class="navbar navbar-default">
+  <div class="navbar-collapse collapse" id="navbar-mobile">
+    <ul class="nav navbar-nav">
+      <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+        <a [routerLink]='["/"]'>
+          <i class="icon-home2"></i><span class="inline-block position-right">Home</span>
+        </a>
+      </li>
+      <li [routerLinkActive]='["link-active"]'>
+        <a [routerLink]='["/dashboard"]'>
+          <i class="icon-statistics"></i><span class="inline-block position-right">Dashboard</span>
+        </a>
+      </li>
+      <li [routerLinkActive]='["link-active"]'>
+        <a [routerLink]='["/list"]'>
+          <i class="icon-list-ordered"></i><span class="inline-block position-right">Advertisers</span>
+        </a>
+      </li>
+    </ul>
+    <div class="navbar-right">
+      <ul class="nav navbar-nav">
+        <li>
+          <a class="navbar-brand" href="javascript:void(0);">
+            <img src="https://3g240q3tz5qy4cot6a12dmsk-wpengine.netdna-ssl.com/wp-content/themes/mediaradar/public/images/logotype-mediaradar.png" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

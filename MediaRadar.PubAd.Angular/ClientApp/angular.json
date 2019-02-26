@@ -1,0 +1,112 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "MediaRadar.PubAd.Angular": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "progress": true,
+            "extractCss": true,
+            "outputPath": "dist",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "assets": [
+              "src/assets"
+            ],
+            "styles": [
+              "src/assets/limitless/css/bootstrap.css",
+              "src/assets/limitless/css/core.css",
+              "src/assets/limitless/css/components.css",
+              "src/assets/limitless/css/colors.css",
+              "src/assets/limitless/css/icons/icomoon/styles.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "src/assets/limitless/js/core/libraries/jquery.min.js",
+              "src/assets/limitless/js/core/libraries/bootstrap.min.js",
+              "src/assets/limitless/js/plugins/ui/drilldown.js",
+              "src/assets/limitless/js/plugins/ui/nicescroll.min.js",
+              "src/assets/limitless/js/plugins/tables/datatables/datatables.min.js",
+              "src/assets/limitless/js/plugins/tables/datatables/extensions/fixed_header.min.js",
+              "src/assets/limitless/js/core/app.js",
+              "src/site.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "MediaRadar.PubAd.Angular:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "MediaRadar.PubAd.Angular:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "MediaRadar.PubAd.Angular:build"
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist-server",
+            "main": "src/main.ts",
+            "tsConfig": "src/tsconfig.server.json"
+          },
+          "configurations": {
+            "dev": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": true
+            },
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "MediaRadar.PubAd.Angular"
+}

@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+@model ActivityMatrix
+
+<div class="row">
+
+    <div class="col-md-8">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h6 class="panel-title">
+                    Top Product Categories
+                </h6>
+                <div class="heading-elements">
+                    <ul class="icons-list">
+                        <li>
+                            <a href="javascript:void(0);"
+                               data-popup="popover" data-trigger="focus"
+                               data-html="true"
+                               data-placement="left"
+                               data-content="<span style='color:black'>The top five Product Categories by estimated spend. Default sort by number of pages (descending), then product category alphabetically.</span>">
+                                <i class="icon icon-question3"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel-body">
+                <table border="0" class="table table-hover table-striped"
+                       style=" font-size:small">
+                    <tbody>
+                        @foreach (var p in this.Model.TopProducts)
+                        {
+                            <tr>
+                                <td style="white-space:nowrap">
+                                    @p
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h6 class="panel-title">
+                    Brands
+                </h6>
+                <div class="heading-elements">
+                    <ul class="icons-list">
+                        <li>
+                            <a href="javascript:void(0);"
+                                    data-popup="popover" data-trigger="focus"
+                                    data-html="true"
+                                    data-placement="left"
+                                    data-content="<span style='color:black'>All brands that have at least 2 ad pages, and are considered part of the Toiletries & Cosmetics > Hair Care  product category. This list should also be sortable and paged. Default sort by brand name alphabetically</span>">
+                                <i class="icon icon-question3"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel-body">
+                <table border="0" class="table table-hover table-striped"
+                       style="font-size:small">
+                    <tbody>
+                        @foreach (var b in this.Model.FocusedBrands)
+                        {
+                            <tr>
+                                <td style="white-space:nowrap">
+                                    @b
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h6 class="panel-title">
+                    Top 5 Parent Companies
+                </h6>
+                <div class="heading-elements">
+                    <ul class="icons-list">
+                        <li>
+                            <a href="javascript:void(0);"
+                               data-popup="popover" data-trigger="focus"
+                               data-html="true"
+                               data-placement="left"
+                               data-content="<span style='color:black'>Top 5 parent company by number of pages, then estimated spend during a single month. Keep in mind that a Parent Company may run ads in multiple issues / months. Default sort by number of pages (descending), estimated spend (descending), then Parent Company alphabetically.</span>">
+                                <i class="icon icon-question3"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel-body">
+                <table border="0" class="table"
+                       style="font-size:small">
+                    <tbody>
+                        @foreach (var grp in this.Model.TopParentCompanies)
+                        {
+                            <tr class="active border-double">
+                                <td>@grp.Month.ToString("MMMM, yyyy")</td>
+                                <td class="text-right">
+                                    <span class="badge bg-green">Top @grp.CompanyNames.Count()</span>
+                                </td>
+                            </tr>
+                            foreach (var c in grp.CompanyNames)
+                            {
+                                <tr>
+                                    <td colspan="2">@c</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

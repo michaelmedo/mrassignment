@@ -1,0 +1,40 @@
+
+<div *ngIf="!this.ads"><em>Please wait ..</em></div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h6 class="panel-title">
+      All advertiser data from 01/01/2011 to 04/01/2011
+    </h6>
+  </div>
+  <div class="panel-body">
+    <table border="0" datatable
+           [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+           class="table datatable-header-nowrap table-striped table-bordered table-condensed datatable-fixed-header"
+           style="width: 100%; font-size:small">
+      <thead>
+        <tr>
+          <td>Month</td>
+          <td>Publication</td>
+          <td>Parent Company</td>
+          <td>Brand</td>
+          <td>Product Category</td>
+          <td>Pages</td>
+          <td>Estimated Spend</td>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr *ngFor='let r of this.ads'>
+          <td style="white-space:nowrap">{{r.Month}}</td>
+          <td>{{r.PublicationName}}</td>
+          <td>{{r.ParentCompany}}</td>
+          <td>{{r.BrandName}}</td>
+          <td style="font-size:smaller"><code>{{r.ProductCategory}}</code></td>
+          <td>{{r.AdPages}}</td>
+          <td><b>{{r.EstPrintSpend | currency}}</b></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>MediaRadar.API.SDK</AssemblyName>
+    <RootNamespace>MediaRadar.API.SDK</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MediaRadar Exercise</title>
+
+    <link href="~/lib/limitless/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/limitless/css/core.css" rel="stylesheet" />
+    <link href="~/lib/limitless/css/components.css" rel="stylesheet" />
+    <link href="~/lib/limitless/css/colors.css" rel="stylesheet" />
+    <link href="~/lib/limitless/css/icons/icomoon/styles.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="navbar navbar-default">
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/">
+                        <i class="icon-home2"></i><span class="inline-block position-right">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Activity/">
+                        <i class="icon-statistics"></i><span class="inline-block position-right">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Activity/Advertisers">
+                        <i class="icon-list-ordered"></i><span class="inline-block position-right">Advertisers</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="navbar-brand" href="javascript:void(0);">
+                            <img src="https://3g240q3tz5qy4cot6a12dmsk-wpengine.netdna-ssl.com/wp-content/themes/mediaradar/public/images/logotype-mediaradar.png" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid extra-padding">
+        @RenderBody()
+    </div>
+
+
+    <script src="~/lib/limitless/js/core/libraries/jquery.min.js"></script>
+    <script src="~/lib/limitless/js/core/libraries/bootstrap.min.js"></script>
+    <script src="~/lib/limitless/js/plugins/ui//drilldown.js"></script>
+    <script src="~/lib/limitless/js/plugins/ui//nicescroll.min.js"></script>
+    <script type="text/javascript" src="~/lib/limitless/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script type="text/javascript" src="~/lib/limitless/js/plugins/tables/datatables/extensions/fixed_header.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+
+    <script src="~/lib/limitless/js/core/app.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

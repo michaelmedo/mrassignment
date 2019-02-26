@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>jJsonViewer</title>
+
+    <link rel="stylesheet" href="css/jjsonviewer.css">
+</head>
+<body>
+    <div id="jjson" class="jjson"></div>
+
+    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/jjsonviewer.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function() {
+			var jjson = '{"Status":true,"Data":[{"Invoice_Status":"In Progress","Invoice_ID":"SINV-000000288","LastUpdate":"\/Date(1525439227426)\/","Portal_Ref_ID":"SUPPLIER_INVOICE-6-282","CreatedDate":"\/Date(1525438484000)\/","Invoice_Type":"ePayables","SupplierID":"4000000016","Supplier_Reference_ID":"LCFURTNV","Invoice_Number":"KS0001","Payment_Status":"UNPAID","Total_Amount":128,"FormatedTotal_Amount":"$128.00","Tax_Amount":0,"Company_Code":"11000","Invoice_Date":"\/Date(1525417200000)\/","Invoice_Due_Date":"\/Date(1528009200000)\/","Settlement_Run_Number":null,"Supplier_Invoice_Payments":{"Account_Name":null,"Payment_Amount":0,"Payment_Date":"\/Date(-62135578800000)\/","Payment_WID":null,"Payment_Method":null,"Payment_Status":null,"Bank_Name":null},"Supplier_Invoice_PaymentList":null,"SyncMessage":null},{"Invoice_Status":"In Progress","Invoice_ID":"SINV-000000300","LastUpdate":"\/Date(1525441271410)\/","Portal_Ref_ID":"15019537-f372-4337-9064-754f18ba9808","CreatedDate":"\/Date(1525441271000)\/","Invoice_Type":"ePayables","SupplierID":"4000000016","Supplier_Reference_ID":"LCFURTNV","Invoice_Number":"SJ133","Payment_Status":"UNPAID","Total_Amount":133,"FormatedTotal_Amount":"$133.00","Tax_Amount":0,"Company_Code":"11000","Invoice_Date":"\/Date(1525417200000)\/","Invoice_Due_Date":"\/Date(1528009200000)\/","Settlement_Run_Number":null,"Supplier_Invoice_Payments":{"Account_Name":null,"Payment_Amount":0,"Payment_Date":"\/Date(-62135578800000)\/","Payment_WID":null,"Payment_Method":null,"Payment_Status":null,"Bank_Name":null},"Supplier_Invoice_PaymentList":null,"SyncMessage":null}],"Exception":null,"CustomErrorMessages":[],"ErrorMessage":"","DataObject":[{"Invoice_Status":"In Progress","Invoice_ID":"SINV-000000288","LastUpdate":"\/Date(1525439227426)\/","Portal_Ref_ID":"SUPPLIER_INVOICE-6-282","CreatedDate":"\/Date(1525438484000)\/","Invoice_Type":"ePayables","SupplierID":"4000000016","Supplier_Reference_ID":"LCFURTNV","Invoice_Number":"KS0001","Payment_Status":"UNPAID","Total_Amount":128,"FormatedTotal_Amount":"$128.00","Tax_Amount":0,"Company_Code":"11000","Invoice_Date":"\/Date(1525417200000)\/","Invoice_Due_Date":"\/Date(1528009200000)\/","Settlement_Run_Number":null,"Supplier_Invoice_Payments":{"Account_Name":null,"Payment_Amount":0,"Payment_Date":"\/Date(-62135578800000)\/","Payment_WID":null,"Payment_Method":null,"Payment_Status":null,"Bank_Name":null},"Supplier_Invoice_PaymentList":null,"SyncMessage":null},{"Invoice_Status":"In Progress","Invoice_ID":"SINV-000000300","LastUpdate":"\/Date(1525441271410)\/","Portal_Ref_ID":"15019537-f372-4337-9064-754f18ba9808","CreatedDate":"\/Date(1525441271000)\/","Invoice_Type":"ePayables","SupplierID":"4000000016","Supplier_Reference_ID":"LCFURTNV","Invoice_Number":"SJ133","Payment_Status":"UNPAID","Total_Amount":133,"FormatedTotal_Amount":"$133.00","Tax_Amount":0,"Company_Code":"11000","Invoice_Date":"\/Date(1525417200000)\/","Invoice_Due_Date":"\/Date(1528009200000)\/","Settlement_Run_Number":null,"Supplier_Invoice_Payments":{"Account_Name":null,"Payment_Amount":0,"Payment_Date":"\/Date(-62135578800000)\/","Payment_WID":null,"Payment_Method":null,"Payment_Status":null,"Bank_Name":null},"Supplier_Invoice_PaymentList":null,"SyncMessage":null}]}';
+
+			$("#jjson").jJsonViewer(jjson, {expanded: true});
+		});
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+.datatable-header {
+  padding-top: 2px !important;
+}
+
+.datatable-header-nowrap > thead > tr > td {
+  white-space: nowrap;
+}
+
+.extra-padding {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
